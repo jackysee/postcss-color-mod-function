@@ -21,7 +21,7 @@ module.exports = (opts = {}) => {
 
 	return {
 		postcssPlugin: 'postcss-color-mod-function',
-		async Once (root, { result }) {
+		async OnceExit (root, { result }) {
 			const customProperties = Object.assign(
 				await customPropertiesPromise,
 				getCustomProperties(root, { preserve: true })
